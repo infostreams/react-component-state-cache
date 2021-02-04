@@ -11,7 +11,7 @@ The cache is cleared when the user reloads the page / your app, so there is no p
 
 ## Installation
 
-    npm install infostreams/react-component-state-cache
+    npm install react-component-state-cache
 
 Then include the ```<ComponentStateContext />``` component somewhere high up in your React DOM,
 for example like this
