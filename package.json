@@ -1,0 +1,41 @@
+{
+  "name": "react-component-state-cache",
+  "version": "1.0.0",
+  "description": "A simple caching mechanism so that React components can remember their state when they are mounted, unmounted, and re-mounted",
+  "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "jsog": "^1.0.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "path": "^0.12.7",
+    "react": "^16",
+    "webpack": "^5.20.1",
+    "webpack-cli": "^4.5.0"
+  },
+  "peerDependencies": {
+    "react": "^16"
+  },
+  "keywords": [
+    "component",
+    "cache",
+    "remember",
+    "restore",
+    "store",
+    "react",
+    "state",
+    "react"
+  ],
+  "scripts": {
+    "build": "rm -rf ./dist/ && webpack",
+    "prepare": "npm run build"
+  },
+  "author": "Ed Akerboom <github@infostreams.net>",
+  "license": "MIT"
+}
