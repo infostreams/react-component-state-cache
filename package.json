@@ -1,6 +1,6 @@
 {
   "name": "react-component-state-cache",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple caching mechanism so that React components can remember their state when they are mounted, unmounted, and re-mounted",
   "main": "dist/index.js",
   "publishConfig": {

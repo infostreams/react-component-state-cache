@@ -1,5 +1,5 @@
 import React from 'react'
-import {parse, stringify} from 'flatted'
+import * as flatted from 'flatted'
 
 export const ComponentStateContext = React.createContext({})
 
@@ -25,7 +25,7 @@ export class ComponentStateCache extends React.Component {
                     ...this.cache.components?.[section],
                     // 1. we serialize the data so that the original object can be garbage collected
                     // 2. we use a special library ('flatted') to prevent errors about circular dependencies in JSON
-                    [key]: stringify(data),
+                    [key]: flatted.stringify(data),
                 }
             }
         }
@@ -38,7 +38,14 @@ export class ComponentStateCache extends React.Component {
      * @param key
      * @returns {any|null}
      */
-    get = (section, key) => parse(this?.cache?.components?.[section]?.[key] || null) || null
+    get = (section, key) => {
+        try {
+            return flatted.parse(this?.cache?.components?.[section]?.[key] || null) || null
+        } catch (exception) {
+            //
+        }
+        return null
+    }
 
     /**
      * Delete a key or a whole section from the component state cache
