@@ -1,13 +1,13 @@
 {
   "name": "react-component-state-cache",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple caching mechanism so that React components can remember their state when they are mounted, unmounted, and re-mounted",
   "main": "dist/index.js",
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "jsog": "^1.0.7"
+    "flatted": "^3.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",
